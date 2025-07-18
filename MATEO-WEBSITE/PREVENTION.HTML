@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ showMission: false, showModal: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heart & Soul Co.</title>
+
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  
+  <link href="https://fonts.cdnfonts.com/css/merolkins" rel="stylesheet">
+
+  
+ <link href="https://fonts.cdnfonts.com/css/zahira-script" rel="stylesheet">
+
+ <script src="tailwind.config.js"></script>
+
+  <style>
+    @keyframes pulseZoom {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+      }
+    }
+
+    .animate-pulse-zoom {
+      animation: pulseZoom 2.5s ease-in-out infinite;
+    }
+
+    .outline-heading {
+      -webkit-text-stroke: 1.5px #222;
+      color: transparent;
+    }
+  </style>
+
+<style>
+  #page-loader {
+    transition: opacity 0.3s ease;
+  }
+</style>
+
+
+<style>
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes scroll-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  .animate-left {
+    animation: scroll-left 20s linear infinite;
+  }
+
+  .animate-right {
+    animation: scroll-right 20s linear infinite;
+  }
+
+  .text-stroke-white {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+  }
+</style>
+
+</head>
+
+<body class="font-serif text-gray-900 bg-white">
+
+  <div id="page-loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+  <div class="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-[#ff7f7f]"></div>
+</div>
+  
+  <header class="bg-[#ff7f7f]">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+<div class="text-black md:text-2xl font-bold tracking-widest uppercase " style="font-family: 'merolkins', serif;">
+  Heart & Soul Co.
+</div>
+
+<nav class="text-lg md:text-2xl font-bold tracking-wider space-x-12 uppercase py-6" style="font-family: 'merolkins', serif;">
+  <a href="HEADER.HTML" class="text-white">Home</a> 
+  <a href="INFORMATION.HTML" class="text-black hover:text-white transition">About</a>
+  <a href="LINKS.HTML" class="text-black hover:text-white transition">Contact</a>
+  <a href="LINKS.HTML" class="text-black hover:text-white transition">Links</a>
+</nav>
+    </div>
+  </header>
+
+  
+  <main class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 text-center md:text-left items-start">
+
+    
+    <div>
+    <h1 class="text-black text-4xl md:text-8xl font-light mb-4 text-center" style="font-family: 'Zahira Script', sans-serif;"> Prevention</h1>
+    <br>
+    <br>
+      <p class="text-[#ff7f7f] text-center md:text-lg leading-relaxed mb-10">
+        Preventing a heart attack isn’t about big, dramatic changes — it’s about everyday habits that protect your heart over time. 
+        It begins with making smart choices in your lifestyle and staying consistent with your health goals.
+      </p>
+
+      <div class="space-y-4">
+        <a href="HEADER.HTML" class="block w-40 mx-auto bg-[#ff7f7f] hover:bg-[#ff5f5f] text-white font-bold py-2 rounded uppercase text-center">Home</a>
+        <a href="WHAT.HTML" class="block w-40 mx-auto bg-[#ff7f7f] hover:bg-[#ff5f5f] text-white font-bold py-2 rounded uppercase text-center">Return</a>
+        <a href="TO DO.HTML" class="block w-40 mx-auto bg-[#ff7f7f] hover:bg-[#ff5f5f] text-white font-bold py-2 rounded uppercase text-center">Proceed</a>
+      </div>
+    </div>
+
+
+<div class="mt-6 h-[500px] overflow-y-auto pr-4 pl-2 space-y-6 scrollbar-thin scrollbar-thumb-pink-300 scrollbar-track-gray-100">
+  <p class="text-[#ff7f7f] text-base md:text-lg leading-relaxed">
+    Start with your diet: Choose foods that are low in saturated fat, trans fat, salt (sodium), and added sugar.
+     Instead, fill your plate with fresh vegetables, fruits, whole grains, nuts, fish, and lean meats.
+      Think of food as fuel for your heart — what you eat directly affects your arteries, cholesterol, and blood pressure.
+  </p>
+
+  <p class="text-[#ff7f7f] text-base md:text-lg leading-relaxed">
+    Physical activity is the next powerful tool. 
+    Moving your body for at least 30 minutes a day, five times a week, can help strengthen your heart muscle, improve circulation, lower your cholesterol, and control your weight. 
+    Whether it’s walking, dancing, biking, or swimming — what matters most is consistency.
+  </p>
+
+  <p class="text-[#ff7f7f] text-base md:text-lg leading-relaxed">
+    Avoid smoking completely, and if you already smoke, seek support to quit.
+     Smoking damages your blood vessels, reduces oxygen in your blood, and increases your risk of blood clots — a major trigger for heart attacks. 
+     Another key factor is managing stress. Chronic stress can raise blood pressure and trigger unhealthy habits like overeating or smoking. 
+     Practice relaxation techniques like deep breathing, meditation, journaling, or even short breaks from screens and noise. <br>
+     <br>
+    Make sure to get enough sleep, ideally 7–8 hours per night. 
+     Poor sleep can affect your hormones, raise blood pressure, and increase the risk of obesity and diabetes — all of which increase heart attack risk. 
+     If you have existing conditions like high blood pressure, high cholesterol, or diabetes, it’s critical to manage them properly. Take your medications as prescribed, attend regular check-ups, and follow your doctor's advice.
+  </p>
+<br>
+  <p class="text-[#ff7f7f]  text-base md:text-lg leading-relaxed"> 
+    Lastly, know your numbers. Stay informed about your blood pressure, cholesterol levels, blood sugar, and body mass index (BMI). 
+    When you’re aware of your risk factors, you can take action early — and early action saves lives.
+</p> 
+
+</div>
+
+  </main>
+
+ <footer class="bg-[#ff7f7f] overflow-hidden relative h-[600px]">
+  <div class="w-full h-full flex flex-col justify-center gap-[2px] py-0 fade-scroll">
+
+    
+    <div class="relative z-10 whitespace-nowrap text-[120px] md:text-[160px] font-extrabold uppercase text-stroke-white animate-left leading-[1]">
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+    </div>
+
+    
+    <div class="relative z-10 whitespace-nowrap text-[120px] md:text-[160px] font-extrabold uppercase text-stroke-white animate-right leading-[1]">
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+    </div>
+
+    
+    <div class="relative z-10 whitespace-nowrap text-[120px] md:text-[160px] font-extrabold uppercase text-stroke-white animate-left leading-[1]">
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+    </div>
+
+  </div>
+</footer>
+
+  <footer class="text-center text-sm text-black-600 mt-12 py-4">
+    © 2025 Heart & Soul Co. All rights reserved.
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('page-loader');
+      if (loader) {
+        loader.style.opacity = '0';
+        loader.style.pointerEvents = 'none';
+        setTimeout(() => loader.remove(), 300); 
+      }
+    }, 1000); 
+  });
+</script>
+
+
+</body>
+</html>

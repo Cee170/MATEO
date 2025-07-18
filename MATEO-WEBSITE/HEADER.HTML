@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ showMission: false, showModal: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heart & Soul Co.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+  @keyframes pulseZoom {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
+
+  .animate-pulse-zoom {
+    animation: pulseZoom 2.5s ease-in-out infinite;
+  }
+</style>
+
+  <style>
+    .outline-heading {
+      -webkit-text-stroke: 1.5px #222;
+      color: transparent;
+    }
+  </style>
+
+  <style>
+  #page-loader {
+    transition: opacity 0.3s ease;
+  }
+</style>
+
+
+<link href="https://fonts.cdnfonts.com/css/merolkins" rel="stylesheet">
+                
+
+
+</head>
+<body class="font-serif text-gray-900 bg-white">
+
+
+<div id="page-loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+  <div class="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-[#ff7f7f]"></div>
+</div>
+
+  
+  <header class="bg-[#ff7f7f]">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+<div class="text-black md:text-2xl font-bold tracking-widest uppercase " style="font-family: 'merolkins', serif;">
+  Heart & Soul Co.
+</div>
+
+<nav class="text-lg md:text-2xl font-bold tracking-wider space-x-12 uppercase py-6" style="font-family: 'merolkins', serif;">
+  <a href="HEADER.HTML" class="text-white">Home</a> 
+  <a href="INFORMATION.HTML" class="text-black hover:text-white transition">About</a>
+  <a href="LINKS.HTML" class="text-black hover:text-white transition">Contact</a>
+  <a href="LINKS.HTML" class="text-black hover:text-white transition">Links</a>
+</nav>
+
+
+    </div>
+  </header>
+
+
+<section class="bg-white py-28 text-center">
+  <h1 class="text-[5rem] md:text-[10rem] font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#ff7f7f] to-[#ff4444] drop-shadow-md animate-pulse-zoom" style="font-family: 'merolkins', serif;">
+    Heart & <br>
+    Soul Co.
+  </h1>
+</section>
+
+
+  
+  <div class="text-center mt-4">
+    <button @click="showMission = !showMission" class="text-[#ff7f7f] text-4xl hover:scale-110 transition-transform duration-200">
+      <span x-show="!showMission">&#x25BC;</span> 
+      <span x-show="showMission">&#x25B2;</span>  
+    </button>
+  </div>
+
+
+<section class="bg-[#ff7f7f] px-4 pb-10 mb-6 overflow-hidden transition-all duration-500 ease-in-out"
+         x-show="showMission"
+         x-transition:enter="transition ease-out duration-500"
+         x-transition:enter-start="opacity-0 transform -translate-y-5"
+         x-transition:enter-end="opacity-100 transform translate-y-0"
+         x-transition:leave="transition ease-in duration-400"
+         x-transition:leave-start="opacity-100 transform translate-y-0"
+         x-transition:leave-end="opacity-0 transform -translate-y-5">
+  <div class="max-w-xl mx-auto bg-[#fef2f2] border border-gray-400 shadow px-8 py-6 mt-10 text-center">
+    <p class="text-[#ff7f7f] text-base md:text-lg leading-relaxed font-medium">
+      Our goal at Heart & Soul Co. is straightforward: to raise awareness of heart health issues and the grave dangers of heart attacks.
+      We think that life is saved by awareness. Our goal is to enable every Filipino to identify early warning signals, make better decisions,
+      and take care of their hearts—one heartbeat at a time—by means of education, empathy, and practical advice.
+    </p>
+    <button @click="showModal = true" class="mt-6 bg-[#ff7f7f] hover:bg-[#ff5f5f] text-white font-bold tracking-wider px-6 py-2 text-sm rounded">
+      START NOW
+    </button>
+  </div>
+</section>
+
+
+
+<div x-show="showModal" x-transition class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div @click.away="showModal = false" class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full text-center">
+    <h2 class="text-2xl font-bold mb-4 text-[#ff7f7f]">Get Started</h2>
+    <p class="text-gray-700 mb-6">Thank you for your interest! We’ll guide you through every heartbeat of this journey.</p>
+    
+    
+    <a href="INFORMATION.HTML"
+       class="inline-block bg-[#ff7f7f] hover:bg-[#ff5f5f] text-white font-bold px-6 py-2 rounded transition">
+      PROCEED
+    </a>
+  </div>
+</div>
+
+  <footer class="text-center text-sm text-black-600 mt-12 py-4">
+    © 2025 Heart & Soul Co. All rights reserved.
+  </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('page-loader');
+      if (loader) {
+        loader.style.opacity = '0';
+        loader.style.pointerEvents = 'none';
+        setTimeout(() => loader.remove(), 300); 
+      }
+    }, 1000); 
+  });
+</script>
+
+
+</body>
+</html>

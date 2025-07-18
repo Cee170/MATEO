@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heart & Soul Co.</title>
+
+  
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+ <link href="https://fonts.cdnfonts.com/css/merolkins" rel="stylesheet">
+ <link href="https://fonts.cdnfonts.com/css/zahira-script" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+ <script src="tailwind.config.js"></script>
+
+   <style>
+    .handwriting {
+      font-family: 'Great Vibes', cursive;
+    }
+  </style>
+
+  <style>
+  #page-loader {
+    transition: opacity 0.3s ease;
+  }
+</style>
+
+
+  <style>
+    @keyframes pulseZoom {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+      }
+    }
+
+    .animate-pulse-zoom {
+      animation: pulseZoom 2.5s ease-in-out infinite;
+    }
+
+    .outline-heading {
+      -webkit-text-stroke: 1.5px #222;
+      color: transparent;
+    }
+  </style>
+
+<style>
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes scroll-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  .animate-left {
+    animation: scroll-left 20s linear infinite;
+  }
+
+  .animate-right {
+    animation: scroll-right 20s linear infinite;
+  }
+
+  .text-stroke-white {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+  }
+</style>
+
+</head>
+
+<body x-data="{ showReferences: false, showMission: false, showModal: false }" class="font-serif text-gray-900 bg-white">
+
+
+<div id="page-loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+  <div class="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-[#ff7f7f]"></div>
+</div>
+
+  
+  <header class="bg-[#ff7f7f]">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+<div class="text-black md:text-2xl font-bold tracking-widest uppercase " style="font-family: 'merolkins', serif;">
+  Heart & Soul Co.
+</div>
+
+<nav class="text-lg md:text-2xl font-bold tracking-wider space-x-12 uppercase py-6" style="font-family: 'merolkins', serif;">
+  <a href="HEADER.HTML" class="text-white">Home</a> 
+  <a href="INFORMATION.HTML" class="text-black hover:text-white transition">About</a>
+  <a href="LINKS.HTML" class="text-black hover:text-white transition">Contact</a>
+  <a href="LINKS.HTML" class="text-black hover:text-white transition">Links</a>
+</nav>
+    </div>
+  </header>
+
+  
+  <section class="max-w-5xl mx-auto px-4 py-16 text-center">
+    <p class="text-[#ff7f7f] text-lg md:text-xl mb-10 leading-relaxed">
+      For more information, we provided a YouTube link that<br>
+      may help you to understand more about “Heart Attack”<br>
+      and healthy lifestyle for prevention and awareness.
+    </p>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">     
+      <iframe class="w-full h-56 bg-[#ff7f7f] rounded-lg shadow" src="https://www.youtube.com/embed/mvU3w_tUIrs?si=vbBpQyoXPB-UN1oa" frameborder="0" allowfullscreen></iframe>
+      <iframe class="w-full h-56 bg-[#ff7f7f] rounded-lg shadow" src="https://www.youtube.com/embed/3_PYnWVoUzM?si=OgkI8fHrzBArmdmU" frameborder="0" allowfullscreen></iframe>
+      <iframe class="w-full h-56 bg-[#ff7f7f] rounded-lg shadow" src="https://www.youtube.com/embed/-eVJhlIyFLg?si=GHJ1jHsy7suysqrE" frameborder="0" allowfullscreen></iframe>
+      <iframe class="w-full h-56 bg-[#ff7f7f] rounded-lg shadow" src="https://www.youtube.com/embed/CRSmVTWORKw?si=hdvVNLCCqpM2JJcH" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+
+
+ <div class="bg-[#ff7f7f] overflow-hidden relative h-[600px]">
+  <div class="w-full h-full flex flex-col justify-center gap-[2px] py-0 fade-scroll">
+
+    
+    <div class="relative z-10 whitespace-nowrap text-[120px] md:text-[160px] font-extrabold uppercase text-stroke-white animate-left leading-[1]">
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+    </div>
+
+    
+    <div class="relative z-10 whitespace-nowrap text-[120px] md:text-[160px] font-extrabold uppercase text-stroke-white animate-right leading-[1]">
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+    </div>
+
+    
+    <div class="relative z-10 whitespace-nowrap text-[120px] md:text-[160px] font-extrabold uppercase text-stroke-white animate-left leading-[1]">
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+      <span class="inline-block mr-12">Heart & Soul Co.</span>
+    </div>
+
+  </div>
+ </div>
+
+
+  
+  <div class="bg-[#ff7f7f] h-32 w-full"></div>
+
+  
+  <div class="relative max-w-3xl mx-auto -mt-24 px-4">
+    <img src="9061502.jpg" alt="Heart Image" class="w-full border-8 border-white shadow-lg rounded-lg" />
+    
+    <div class="absolute -bottom-5 left-1/2 transform -translate-x-1/2">
+      <button @click="showReferences = !showReferences"
+              class="bg-[#ff7f7f] text-white font-bold uppercase px-6 py-1 rounded shadow hover:bg-[#ff5f5f] transition">
+        References
+      </button>
+    </div>
+  </div>
+
+  
+  <section x-show="showReferences" x-transition
+           class="mt-14 max-w-4xl mx-auto px-6 text-sm text-center leading-relaxed space-y-4">
+    <p>(2025). <a href="https://www.heart.org/en/health-topics/heart-attack/first-aid-for-heart-attack" class="text-[#ff7f7f] underline">Www.heart.org</a>.</p>
+    <p>Mayo Clinic. (2018). <a href="https://www.mayoclinic.org/first-aid/first-aid-heart-attack/basics/art-20056679" class="text-[#ff7f7f] underline">Do you know the signs of a heart attack?</a></p>
+    <p>World Health Organization. (2021, June 11). <a href="https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)" class="text-[#ff7f7f] underline">Cardiovascular diseases (CVDs).</a></p>
+    <p>John Hopkins Medicine. (n.d.). <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/heart-attack" class="text-[#ff7f7f] underline">Heart Attack.</a></p>
+    <p>National Heart, Lung, and Blood Institute. (2022, March 24). <a href="https://www.nhlbi.nih.gov/health/heart-attack" class="text-[#ff7f7f] underline">What is a heart attack?</a></p>
+  </section>
+
+
+  <div class="mt-16 text-center px-4">
+    <h2 class="handwriting text-3xl md:text-5xl mb-4">Thank you for visiting us.</h2>
+    <p class="text-sm mt-2 text-gray-800 font-medium">© 2025 Heart and Soul Co. All rights reserved.</p>
+  </div>
+  <br>
+  <br>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('page-loader');
+      if (loader) {
+        loader.style.opacity = '0';
+        loader.style.pointerEvents = 'none';
+        setTimeout(() => loader.remove(), 300); // Wait for fade out
+      }
+    }, 1000); // 1-second minimum load time
+  });
+</script>
+
+
+</body>
+</html>
